@@ -17,7 +17,14 @@ function logginUserMessage(username){
     console.log(`${username} , Just Logged In` );
 }
 
+function calculateCartPrice(...num1){
+
+    return num1
+}
+
+
+
 //Function Calling 
 add2Numbers(3,"45"); //while calling a function these parameters become arguements
 logginUserMessage();
-
+console.log(calculateCartPrice(45,234,543,123));

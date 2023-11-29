@@ -1,0 +1,17 @@
+<script>
+    fetch('https://data.covid19india.org/v4/min/timeseries.min.json')
+    .then((apidata) =>{
+        return apidata.json();
+    }).then((actualData) =>{
+        // console.log(actualData);
+
+        const myData = actualData.Countries[101];
+
+        document.getElementById('apiIndia').innerHTML = `The name of the country is ${myData.Country}.
+        The TotalConfirmed cases is ${myData.TotalConfirmed} 
+        and the Total Deaths cases here is ${myData.TotalDeaths}
+         and finally the Total Recovered Cases are ${myData.TotalRecovered}`;
+    }).catch((err) =>{
+        console.log(err);
+    });
+</script>
